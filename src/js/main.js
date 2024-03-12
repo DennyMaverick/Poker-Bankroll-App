@@ -1,0 +1,9 @@
+// import './modules/lang';
+// import './modules/theme';
+import './modules/main-script';
+import './modules/rotateNickname';
+import './modules/directNickname';
+import './modules/changeNicknameColor';
+import './modules/changeNickname';
+import './modules/changeBgColorAvatar';
+import './modules/countBuyIns';

@@ -1,0 +1,11 @@
+.change-direction-nickname {
+  &__title {
+    color: $white;
+    line-height: 1.5;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  &__controls {
+    position: relative;
+  }
+}

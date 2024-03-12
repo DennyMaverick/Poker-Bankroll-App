@@ -1,0 +1,18 @@
+.rotation-nickname {
+  // .rotation-nickname__title
+
+  &__title {
+    color: $white;
+    line-height: 1.5;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  // .rotation-nickname__controls
+
+  &__controls {
+    display: flex;
+    gap: 20px;
+  }
+}
+

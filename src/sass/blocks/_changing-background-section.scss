@@ -1,0 +1,29 @@
+.changing-background-section {
+
+    // .changing-background-section__title
+
+    &__title {
+      color: $white;
+      text-transform: uppercase;
+      margin-right: 30px;
+      font-size: 1.3rem;
+      line-height: 1.5;
+    }
+
+    // .changing-background-section__bg-change-input
+    &__label-for-bg-input {
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      background-color: transparent;
+      border: 2px solid $color-title-decore;
+      box-shadow: 0 0 15px $color-title-decore;
+    }
+    &__bg-change-input, &__color-change-border-input {
+      visibility: hidden;
+      transform: scale(0);
+      height: 0;
+      width: 0;
+    }
+}

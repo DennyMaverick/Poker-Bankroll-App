@@ -1,0 +1,66 @@
+.bankroll-app {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  &__title {
+    display: inline-block;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: $white;
+    text-shadow: 1px 1px 10px $black;
+    position: relative;
+    &::after {
+      position: absolute;
+      right: -150px;
+      top: -20px;
+      content: 'POKER';
+      transform: rotate(35deg);
+      color: $color-title-decore;
+    }
+  }
+  &__inner {
+    max-width: 750px;
+  }
+  &__top {
+    padding: 35px;
+    display: flex;
+    background-color: $primary-color;
+    justify-content: space-between;
+    box-shadow: 2px 2px 10px $black;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 30px;
+  }
+  &__bottom {
+    padding: 35px;
+    box-shadow: 2px 2px 10px $black;
+    background-color: $secondary-color;
+    border-radius: 0 0 20px 20px;
+  }
+  &__left-side {
+    width: 48%;
+  }
+  &__side-bar {
+    width: 45%;
+  }
+  &__border-avatar {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-bottom: 30px;
+  }
+  &__change-nickname {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  &__change-color-nickname {
+    display: flex;
+    align-items: center;
+  }
+}
+
+// Each new level + half of heart <br> All of these is 29, from 1 to 10 -- 5 hearts are red <br>
+//  next from 11 to 20 these is not hearts these is shields, I need to think the design <br>
+// from 21 to 29 lv is star, to think design.

@@ -1,0 +1,14 @@
+.rotate-controls {
+  &__icon {
+    fill: $color-title-decore;
+    width: 17px;
+    height: 17px;
+    filter:drop-shadow(0 0 3px $color-title-decore);
+  }
+  &--left {
+
+  }
+  &--right {
+    transform: translateY(-3.5px) rotate(180deg);
+  }
+}

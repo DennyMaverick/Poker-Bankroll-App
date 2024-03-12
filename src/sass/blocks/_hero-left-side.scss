@@ -1,0 +1,77 @@
+.hero-left-side {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  // .photo-hero__title
+
+  &__title {
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  &__subtitle {
+    color: $color-title-decore;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+
+  // .photo-hero__photo
+
+  &__photo {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    height: 250px;
+    width: 250px;
+    border-width: 5px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 50%;
+    min-height: 250px;
+    margin-bottom: 50px;
+  }
+  &__nickname {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    position: absolute;
+    transform: rotate(-20deg);
+    padding: 10px 12px;
+    background-color: transparent;
+    color: $white;
+    left: 20px;
+    top: 24px;
+    border: none;
+    outline: none;
+  }
+  &__small-circle {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+  }
+  &__picture {
+    object-fit: contain;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    row-gap: 20px;
+    column-gap: 30px;
+  }
+  &__changing-background-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__change-direction-nickname {
+    margin-bottom: 30px;
+  }
+}
