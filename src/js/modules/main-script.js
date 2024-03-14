@@ -33,6 +33,7 @@ const entrySatTextForbidden = document.querySelector(
   '.entry__sat-text-forbidden'
 );
 const satBuyinValue = document.getElementById('entry-value-buy-in-sat');
+const entryBoxCostSat = document.querySelector('.entry__box-cost-sat');
 
 const rangsRus = [
   'рыбка',
@@ -289,11 +290,19 @@ const setSatellitesValue = function () {
   if (currentBankrollBuyin === 0) {
     entrySatTextForbidden.classList.add('entry__sat-text-forbidden--active');
 
+    satBuyinValue.classList.add('entry__description-text--forbidden');
+
     satBuyinValue.textContent = Math.floor(currentInputValue / minBuyin);
+
+    entryBoxCostSat.style.color = '#d63838';
 
     entrySatValue.textContent = minBuyin;
   } else {
     entrySatTextForbidden.classList.remove('entry__sat-text-forbidden--active');
+
+    satBuyinValue.classList.remove('entry__description-text--forbidden');
+
+    entryBoxCostSat.style.color = '#94da25';
 
     satBuyinValue.textContent = Math.floor(
       currentInputValue / currentLimitSatBuyin
