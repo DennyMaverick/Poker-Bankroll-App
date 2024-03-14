@@ -20,12 +20,19 @@ const statusLevelTextElIncrease = document.querySelector(
 );
 const boxCost = document.querySelector('.entry__box-cost');
 const entryCashValue = document.getElementById('entry-value-cash');
-const entryTextForbiddenTextEl = document.querySelector('.entry__cash-forbiden-text');
+const entryTextForbiddenTextEl = document.querySelector(
+  '.entry__cash-forbiden-text'
+);
 const entryBoxCashCostEl = document.querySelector('.entry__cash-value-box');
 const entryDescriptionTextCash = document.getElementById(
   'entry-description-text-cash'
 );
 const entryBuyinValueCash = document.getElementById('entry-value-buy-in-cash');
+const entrySatValue = document.getElementById('entry-sat-value');
+const entrySatTextForbidden = document.querySelector(
+  '.entry__sat-text-forbidden'
+);
+const satBuyinValue = document.getElementById('entry-value-buy-in-sat');
 
 const rangsRus = [
   'рыбка',
@@ -107,11 +114,11 @@ const bankrollScoresCash = [
 
 const bankrollNLLimits = [2, 5, 10, 25, 50, 100, 200, 500, 1000];
 
-// NL2, NL5, Nl10, Nl25, NL50, Nl100, Nl200, NL500, Nl1000
-// 2*300, 5*300, 10*300, 25*300, 50*300, 100*300, 200*300, 500*300, 1000*300
+const satellitesCost = [0.25, 1, 2, 3, 5, 10, 25, 50, 100, 200, 500, 1000];
 
-
-// const sattelitesCost = [0.25, 1, 2, 3, 5, 10];
+const bankrollSatArr = [
+  125, 500, 1000, 1500, 2500, 5000, 12500, 25000, 50000, 100000, 250000, 500000,
+];
 
 let currentLevel = localStorage.getItem('currentLevel');
 
@@ -230,8 +237,6 @@ const setHeroPicture = function () {
 
 setHeroPicture();
 
-
-
 // let currentCashLimit = +localStorage.getItem('current-cash-limit');
 
 const setLimitCash = function () {
@@ -247,14 +252,16 @@ const setLimitCash = function () {
   if (currentLimitCashBankroll === 0) {
     entryBoxCashCostEl.classList.add('entry__cash-value-box--forbidden');
     entryTextForbiddenTextEl.classList.add('entry__cash-forbiden-text--active');
-    entryDescriptionTextCash.classList.add('entry__description-text--forbidden');
-    entryCashValue.textContent = 2;
-    entryBuyinValueCash.textContent = Math.floor(
-      currentInputValue / 2
+    entryDescriptionTextCash.classList.add(
+      'entry__description-text--forbidden'
     );
+    entryCashValue.textContent = 2;
+    entryBuyinValueCash.textContent = Math.floor(currentInputValue / 2);
   } else {
     entryBoxCashCostEl.classList.remove('entry__cash-value-box--forbidden');
-    entryTextForbiddenTextEl.classList.remove('entry__cash-forbiden-text--active');
+    entryTextForbiddenTextEl.classList.remove(
+      'entry__cash-forbiden-text--active'
+    );
     entryDescriptionTextCash.classList.remove(
       'entry__description-text--forbidden'
     );
@@ -263,10 +270,40 @@ const setLimitCash = function () {
       currentInputValue / currentLimitNL
     );
   }
-
 };
 
 setLimitCash();
+
+const setSatellitesValue = function () {
+  let currentBankrollBuyin = 0;
+  let minBuyin = 0.25;
+
+  for (let i = 0; i < bankrollSatArr.length; i++) {
+    if (currentInputValue >= bankrollSatArr[i]) {
+      currentBankrollBuyin = bankrollSatArr[i];
+    }
+  }
+
+  let currentLimitSatBuyin = currentBankrollBuyin / 500;
+
+  if (currentBankrollBuyin === 0) {
+    entrySatTextForbidden.classList.add('entry__sat-text-forbidden--active');
+
+    satBuyinValue.textContent = Math.floor(currentInputValue / minBuyin);
+
+    entrySatValue.textContent = minBuyin;
+  } else {
+    entrySatTextForbidden.classList.remove('entry__sat-text-forbidden--active');
+
+    satBuyinValue.textContent = Math.floor(
+      currentInputValue / currentLimitSatBuyin
+    );
+
+    entrySatValue.textContent = currentLimitSatBuyin;
+  }
+};
+
+setSatellitesValue();
 
 // currentInputValue;
 
@@ -302,7 +339,7 @@ bankrollInput.addEventListener('keydown', event => {
     changeStatusTextLevel();
     updateCurrentLevel();
     setLimitCash();
-    // setArrayAvailableSat();
+    setSatellitesValue();
   }
 });
 
@@ -313,7 +350,7 @@ bankrollInput.addEventListener('blur', () => {
   changeStatusTextLevel();
   updateCurrentLevel();
   setLimitCash();
-  // setArrayAvailableSat();
+  setSatellitesValue();
 });
 
 //  Входные данные:
