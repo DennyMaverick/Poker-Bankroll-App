@@ -1,1 +1,213 @@
-<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8" />    <meta http-equiv="X-UA-Compatible" content="IE=edge" />    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <meta name="google" value="notranslate" />    <title>Bankroll app</title>    <!-- <link rel="icon" href="img/favicon/favicon.svg" /> -->    <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png" />    <link rel="manifest" href="manifest.json" /> -->    <!-- <meta      name="description"      content="Interface elements for web pages / templates for your solutions"    /> -->    <link rel="stylesheet" href="./css/libs/libs.min.css" />    <link rel="stylesheet" href="./css/style.min.css" /></head><body>    <!-- <header class="header">      <div class="header__inner container">      </div>    </header> -->    <main class="main">        <section class="bankroll-app">            <div class="container bankroll-app__inner">                <h1 class="bankroll-app__title">Твой банкролл</h1>                <div class="bankroll-app__wrapper">                    <div class="bankroll-app__top">                        <div class="bankroll-app__left-side hero-left-side">                            <div class="hero-left-side__name">                                <h2 class="hero-left-side__title">Твой ранг:</h2>                                <h3 class="hero-left-side__subtitle hero-left-side--default-rang" id="heroName">                                    Рыбка                                </h3>                            </div>                            <div id="photo-hero" class="hero-left-side__photo">                                <div class="hero-left-side__small-circle">                                    <picture><source srcset="./img/fish-changed.webp" type="image/webp"><img class="hero-left-side__picture" id="photoHeroPic" src="./img/fish-changed.png" alt="Hero Photo" /></picture>                                </div>                                <input id="hero-nickname-text" class="hero-left-side__nickname" disabled type="text" />                            </div>                            <section class="hero-left-side__changing-background-section changing-background-section">                                <h3 class="changing-background-section__title">                                    Поменять фон аватарки:                                </h3>                                <label class="changing-background-section__label-for-bg-input" for="change-input">                                    <input id="change-input" value="#b8b8d3" class="changing-background-section__bg-change-input" type="color" />                                </label>                            </section>                            <section class="bankroll-app__border-avatar changing-background-section__border avatar-border">                                <h3 class="avatar-border__title">                                    Поменять обводку аватарки:                                </h3>                                <div class="avatar-border__elements-of-controls">                                    <label class="avatar-border__label" for="change-input-border">                                        <input id="change-input-border" value="#b8b8d3" class="changing-background-section__color-change-border-input" type="color" />                                    </label>                                    <button id="remove-border" class="avatar-border__remove-border-btn"></button>                                </div>                            </section>                            <section class="hero-left-side__change-direction-nickname change-direction-nickname">                                <h3 class="change-direction-nickname__title">                                    Поменять расположение никнейма:                                </h3>                                <div class="change-direction-nickname__controls direction-nickname-controls">                                    <button data-direction="left" class="direction-nickname-controls__btn direction-nickname-controls--left">                                        <svg class="direction-nickname-controls__icon">                                            <use xlink:href="./img/sprite/symbol/sprite.svg#arrow-left" />                                        </svg>                                    </button>                                    <button data-direction="top" class="direction-nickname-controls__btn direction-nickname-controls--top">                                        <svg class="direction-nickname-controls__icon">                                            <use xlink:href="./img/sprite/symbol/sprite.svg#arrow-left" />                                        </svg>                                    </button>                                    <button data-direction="right" class="direction-nickname-controls__btn direction-nickname-controls--right">                                        <svg class="direction-nickname-controls__icon">                                            <use xlink:href="./img/sprite/symbol/sprite.svg#arrow-left" />                                        </svg>                                    </button>                                    <button data-direction="bottom" class="direction-nickname-controls__btn direction-nickname-controls--bottom">                                        <svg class="direction-nickname-controls__icon">                                            <use xlink:href="./img/sprite/symbol/sprite.svg#arrow-left" />                                        </svg>                                    </button>                                </div>                            </section>                            <section class="hero-left-side__rotation-nickname rotation-nickname">                                <h3 class="rotation-nickname__title">Повернуть никнейм:</h3>                                <div class="rotation-nickname__controls rotate-controls">                                    <button id="rotate-left-btn" class="rotate-controls__btn rotate-controls--left">                                        <svg class="rotate-controls__icon">                                            <use xlink:href="./img/sprite/symbol/sprite.svg#arrow-left" />                                        </svg>                                    </button>                                    <button id="rotate-right-btn" class="rotate-controls__btn rotate-controls--right">                                        <svg class="rotate-controls__icon">                                            <use xlink:href="./img/sprite/symbol/sprite.svg#arrow-left" />                                        </svg>                                    </button>                                </div>                            </section>                        </div>                        <sidebar class="bankroll-app__side-bar side-bar">                            <div class="side-bar__level level">                                <h2 class="level__title">                                    Level                                    <span                      id="level-up"                      class="level__level-up level-up--default"                    >                      1                    </span>                                </h2>                                <div class="level__status"></div>                            </div>                            <div class="side-bar__entry entry">                                <div class="entry__mtt-box">                                    <h3 class="entry__mtt-title">MTT</h3>                                    <div class="entry__tournaments-mtt">                                        <span class="entry__description-text">                        Твой buy-in в турнирах:                      </span>                                        <div class="entry__box-cost">                                            <span id="entry-value" class="entry__value">0.1</span>                                            <span class="entry__currency">$</span>                                        </div>                                    </div>                                    <div class="entry__quontity-buy-in quontity-buy-in">                                        <span class="entry__description-text">Число входов:</span>                                        <span id="entry-value-buy-in" class="entry__buy-in-value">                        1                      </span>                                    </div>                                </div>                                <div class="entry__cash-box">                                    <h3 class="entry__cash-title">CASH</h3>                                    <div class="entry__cash">                                        <span class="entry__description-text">                        Твой лимит в cash:                      </span>                                        <div class="entry__box-cost">                                            <div class="entry__cash-value">                                                <p class="entry__cash-value-box">                                                    <span class="entry__value">NL -</span>                                                    <span id="entry-value-cash" class="entry__currency">                              2                            </span>                                                </p>                                            </div>                                        </div>                                    </div>                                    <div id="entry-description-text-cash" class="entry__quontity-buy-in quontity-buy-in">                                        <span class="entry__description-text entry__description-text-cash">Число входов:</span>                                        <span                        id="entry-value-buy-in-cash"                        class="entry__buy-in-value-cash"                      >                        1                      </span>                                    </div>                                    <div class="entry__cash-forbiden-text">                                        Еще рано играть в кэш                                    </div>                                </div>                                <div class="entry__satellites-box">                                    <h3 class="entry__satellites-title">SATELLITES</h3>                                    <div class="entry__satellites">                                        <span class="entry__description-text">                        Твой buy-in в сателлитах:                      </span>                                        <div class="entry__box-cost entry__box-cost-sat">                                            <span id="entry-sat-value" class="entry__sat-value">0.25</span>                                            <span class="entry__currency">$</span>                                        </div>                                    </div>                                    <div class="entry__quontity-buy-in quontity-buy-in">                                        <span class="entry__description-text">Число входов:</span>                                        <span id="entry-value-buy-in-sat" class="entry__buy-in-value">                        1                      </span>                                    </div>                                    <p class="entry__sat-text-forbidden">                                        еще рано играть в сателлиты!                                    </p>                                </div>                            </div>                            <p class="side-bar__status-level">                                <span class="side-bar__decrease-level">                    Требуется снизить лимит!                  </span>                                <span class="side-bar__increase-level">                    Ура! Можно подняться на лимит выше!                  </span>                            </p>                            <section class="bankroll-app__change-nickname change-nickname">                                <h3 class="change-nickname__title">                                    Введи свой никнейм в poker-руме:                                </h3>                                <input id="hero-nickname" class="change-nickname__input" type="text" maxlength="17" />                            </section>                            <section class="bankroll-app__change-color-nickname change-color-nickname">                                <h3 class="change-color-nickname__title">                                    Поменять цвет никнейма:                                </h3>                                <label class="change-color-nickname__label" for="nickname-color">                                    <input id="nickname-color" class="change-color-nickname__input" type="color" maxlength="17" />                                </label>                            </section>                        </sidebar>                    </div>                    <div class="bankroll-app__bottom">                        <div class="bottom-input">                            <h3 class="bottom-input__title">Введи cвой банкролл:</h3>                            <div class="bottom-input__input-box">                                <input id="input" class="bottom-input__input bankroll-app__input" type="number" />                                <span class="bottom-input__money-value">$</span>                            </div>                        </div>                    </div>                </div>            </div>        </section>    </main>    <!-- <footer class="footer" id="contacts">      <div class="footer__inner container"></div>    </footer> -->    <!-- * jQuery -->    <script src="./js/libs/jquery/jquery.js"></script>    <!-- * js libs -->    <script src="./js/libs/vendors/libs.min.js"></script>    <!--* main script  -->    <script src="./js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="google" value="notranslate">
+    <title>Bankroll app</title>
+    <link rel="stylesheet" href="./css/libs/libs.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+  </head>
+  <body>
+    <main class="main">
+      <section class="bankroll-app">
+        <div class="container bankroll-app__inner">
+          <h1 class="bankroll-app__title">Твой банкролл</h1>
+          <div class="bankroll-app__wrapper">
+            <div class="bankroll-app__top">
+              <div class="bankroll-app__left-side hero-left-side">
+                <div class="hero-left-side__name">
+                  <h2 class="hero-left-side__title">Твой ранг:</h2>
+                  <h3 class="hero-left-side__subtitle hero-left-side--default-rang" id="heroName">
+                    Рыбка
+                  </h3>
+                </div>
+                <div id="photo-hero" class="hero-left-side__photo">
+                  <div class="hero-left-side__small-circle">
+                    <img class="hero-left-side__picture" id="photoHeroPic" src="./img/fish-changed.png" alt="Hero Photo">
+                  </div>
+                  <input id="hero-nickname-text" class="hero-left-side__nickname" disabled="disabled" type="text">
+                </div>
+                <section class="hero-left-side__changing-background-section changing-background-section">
+                  <h3 class="changing-background-section__title">
+                    Поменять фон аватарки:
+                  </h3>
+                  <label class="changing-background-section__label-for-bg-input" for="change-input">
+                    <input id="change-input" value="#b8b8d3" class="changing-background-section__bg-change-input" type="color">
+                  </label>
+                </section>
+                <section class="bankroll-app__border-avatar changing-background-section__border avatar-border">
+                  <h3 class="avatar-border__title">
+                    Поменять обводку аватарки:
+                  </h3>
+                  <div class="avatar-border__elements-of-controls">
+                    <label class="avatar-border__label" for="change-input-border">
+                      <input id="change-input-border" value="#b8b8d3" class="changing-background-section__color-change-border-input" type="color">
+                    </label>
+                    <button id="remove-border" class="avatar-border__remove-border-btn"></button>
+                  </div>
+                </section>
+                <section class="hero-left-side__change-direction-nickname change-direction-nickname">
+                  <h3 class="change-direction-nickname__title">
+                    Поменять расположение никнейма:
+                  </h3>
+                  <div class="change-direction-nickname__controls direction-nickname-controls">
+                    <button data-direction="left" class="direction-nickname-controls__btn direction-nickname-controls--left">
+                      <svg class="direction-nickname-controls__icon">
+                        <use xlink:href="./img/sprite/symbol/sprite.svg#arrow-left"/>
+                      </svg>
+                    </button>
+                    <button data-direction="top" class="direction-nickname-controls__btn direction-nickname-controls--top">
+                      <svg class="direction-nickname-controls__icon">
+                        <use xlink:href="./img/sprite/symbol/sprite.svg#arrow-left"/>
+                      </svg>
+                    </button>
+                    <button data-direction="right" class="direction-nickname-controls__btn direction-nickname-controls--right">
+                      <svg class="direction-nickname-controls__icon">
+                        <use xlink:href="./img/sprite/symbol/sprite.svg#arrow-left"/>
+                      </svg>
+                    </button>
+                    <button data-direction="bottom" class="direction-nickname-controls__btn direction-nickname-controls--bottom">
+                      <svg class="direction-nickname-controls__icon">
+                        <use xlink:href="./img/sprite/symbol/sprite.svg#arrow-left"/>
+                      </svg>
+                    </button>
+                  </div>
+                </section>
+                <section class="hero-left-side__rotation-nickname rotation-nickname">
+                  <h3 class="rotation-nickname__title">Повернуть никнейм:</h3>
+                  <div class="rotation-nickname__controls rotate-controls">
+                    <button id="rotate-left-btn" class="rotate-controls__btn rotate-controls--left">
+                      <svg class="rotate-controls__icon">
+                        <use xlink:href="./img/sprite/symbol/sprite.svg#arrow-left"/>
+                      </svg>
+                    </button>
+                    <button id="rotate-right-btn" class="rotate-controls__btn rotate-controls--right">
+                      <svg class="rotate-controls__icon">
+                        <use xlink:href="./img/sprite/symbol/sprite.svg#arrow-left"/>
+                      </svg>
+                    </button>
+                  </div>
+                </section>
+              </div>
+              <sidebar class="bankroll-app__side-bar side-bar">
+                <div class="side-bar__level level">
+                  <h2 class="level__title">
+                    Level
+                    <span id="level-up" class="level__level-up level-up--default">
+                      1
+                    </span>
+                  </h2>
+                  <div class="level__status"></div>
+                </div>
+                <div class="side-bar__entry entry">
+                  <div class="entry__mtt-box">
+                    <h3 class="entry__mtt-title">MTT</h3>
+                    <div class="entry__tournaments-mtt">
+                      <span class="entry__description-text">
+                        Твой buy-in в турнирах:
+                      </span>
+                      <div class="entry__box-cost">
+                        <span id="entry-value" class="entry__value">0.1</span>
+                        <span class="entry__currency">$</span>
+                      </div>
+                    </div>
+                    <div class="entry__quontity-buy-in quontity-buy-in">
+                      <span class="entry__description-text">Число входов:</span>
+                      <span id="entry-value-buy-in" class="entry__buy-in-value">
+                        1
+                      </span>
+                    </div>
+                  </div>
+                  <div class="entry__cash-box">
+                    <h3 class="entry__cash-title">CASH</h3>
+                    <div class="entry__cash">
+                      <span class="entry__description-text">
+                        Твой лимит в cash:
+                      </span>
+                      <div class="entry__box-cost">
+                        <div class="entry__cash-value">
+                          <p class="entry__cash-value-box">
+                            <span class="entry__value">NL -</span>
+                            <span id="entry-value-cash" class="entry__currency">
+                              2
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="entry-description-text-cash" class="entry__quontity-buy-in quontity-buy-in">
+                      <span class="entry__description-text entry__description-text-cash">Число входов:</span>
+                      <span id="entry-value-buy-in-cash" class="entry__buy-in-value-cash">
+                        1
+                      </span>
+                    </div>
+                    <div class="entry__cash-forbiden-text">
+                    Еще рано играть в кэш
+                  </div>
+                  </div>
+                  <div class="entry__satellites-box">
+                    <h3 class="entry__satellites-title">SATELLITES</h3>
+                    <div class="entry__satellites">
+                      <span class="entry__description-text">
+                        Твой buy-in в сателлитах:
+                      </span>
+                      <div class="entry__box-cost entry__box-cost-sat">
+                        <span id="entry-sat-value" class="entry__sat-value">0.25</span>
+                        <span class="entry__currency">$</span>
+                      </div>
+                    </div>
+                    <div class="entry__quontity-buy-in quontity-buy-in">
+                      <span class="entry__description-text">Число входов:</span>
+                      <span id="entry-value-buy-in-sat" class="entry__buy-in-value">
+                        1
+                      </span>
+                    </div>
+                    <p class="entry__sat-text-forbidden">
+                      еще рано играть в сателлиты!
+                    </p>
+                  </div>
+                </div>
+                <p class="side-bar__status-level">
+                  <span class="side-bar__decrease-level">
+                    Требуется снизить лимит!
+                  </span>
+                  <span class="side-bar__increase-level">
+                    Ура! Можно подняться на лимит выше!
+                  </span>
+                </p>
+                <section class="bankroll-app__change-nickname change-nickname">
+                  <h3 class="change-nickname__title">
+                    Введи свой никнейм в poker-руме:
+                  </h3>
+                  <input id="hero-nickname" class="change-nickname__input" type="text" maxlength="17">
+                </section>
+                <section class="bankroll-app__change-color-nickname change-color-nickname">
+                  <h3 class="change-color-nickname__title">
+                    Поменять цвет никнейма:
+                  </h3>
+                  <label class="change-color-nickname__label" for="nickname-color">
+                    <input id="nickname-color" class="change-color-nickname__input" type="color" maxlength="17">
+                  </label>
+                </section>
+              </sidebar>
+            </div>
+            <div class="bankroll-app__bottom">
+              <div class="bottom-input">
+                <h3 class="bottom-input__title">Введи cвой банкролл:</h3>
+                <div class="bottom-input__input-box">
+                  <input id="input" class="bottom-input__input bankroll-app__input" type="number">
+                  <span class="bottom-input__money-value">$</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./js/libs/jquery/jquery.min.js"></script>
+    <script src="./js/libs/vendors/libs.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
