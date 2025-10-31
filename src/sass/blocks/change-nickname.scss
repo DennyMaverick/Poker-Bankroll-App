@@ -1,0 +1,20 @@
+@use '../vars.scss';
+
+.change-nickname {
+  &__title {
+    color: vars.$white;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+  }
+  &__input {
+    padding: 7px;
+    border: 2px solid vars.$color-title-decore;
+    color: vars.$color-title-decore;
+    font-family: inherit;
+    background-color: transparent;
+    outline: none;
+  }
+}

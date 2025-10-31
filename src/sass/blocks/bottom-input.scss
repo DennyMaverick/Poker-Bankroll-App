@@ -1,0 +1,36 @@
+@use '../vars.scss';
+
+.bottom-input {
+  &__title {
+    text-transform: uppercase;
+    color: vars.$white;
+    margin-bottom: 30px;
+    font-size: 2.25rem;
+  }
+  &__input {
+    padding: 10px;
+    background-color: transparent;
+    border: 3px solid vars.$color-title-decore;
+    border-radius: 10px;
+    cursor: pointer;
+    color: vars.$color-title-decore;
+    height: 100px;
+    width: 100%;
+    max-width: 290px;
+    font-size: 7.2rem;
+    outline: none;
+  }
+  &__money-value {
+    color: vars.$color-title-decore;
+    font-size: 7.2rem;
+  }
+  &__input-box {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  &__changing-background-section {
+    margin-bottom: 30px;
+  }
+}

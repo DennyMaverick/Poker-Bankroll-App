@@ -1,0 +1,21 @@
+@use '../vars.scss';
+
+.btn {
+  font-family: 'Montserrat', sans-serif;
+  color: vars.$btn-color;
+  font-weight: 600;
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 1.5rem;
+  border-radius: 7px;
+  background-color: vars.$orange;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px vars.$orange;
+  transition: background-color .3s ease-in, color .3s ease-in;
+  &:hover {
+    background-color: vars.$black;
+    color: vars.$orange;
+  }
+}
+

@@ -1,22 +1,23 @@
-const {watch, series, parallel} = require("gulp")
-const browserSync = require("browser-sync").create()
+const { watch, series, parallel } = require("gulp");
+const browserSync = require("browser-sync").create();
 
 // Конфигурация
-const path = require("./config/path.js")
-const app = require("./config/app.js")
+const path = require("./config/path.js");
+const app = require('./config/app.js');
 
 // Задачи
-const clear = require("./task/clear.js")
-const html = require("./task/html.js")
-const scss = require("./task/scss.js")
-const js = require("./task/js.js")
-const img = require("./task/img.js")
-const font = require("./task/font.js")
-// const favicon = require("./task/favicon.js")
-const svgsprite = require("./task/svgsprite.js")
-const libsCssAndScss = require("./task/libsCssScss")
-const jslibs = require("./task/jslibs.js")
-const jquerylib = require("./task/jquerylib.js")
+const clear = require("./tasks/clear.js");
+const html = require("./tasks/html.js");
+const scss = require("./tasks/scss.js");
+const js = require("./tasks/js.js");
+const img = require("./tasks/img.js");
+// const font = require("./tasks/font.js");
+const jslibs = require("./tasks/jslibs.js");
+const jquerylib = require("./tasks/jquerylib.js");
+const libsCssScss = require("./tasks/libscssscss.js");
+// const favicon = require("./tasks/favicon.js");
+const svgsprite = require("./tasks/svgsprite.js");
+const jquerylibs = require("./tasks/jquerylibs.js")
 
 // Статический сервер
 const server = () => {
@@ -25,7 +26,8 @@ const server = () => {
       baseDir: path.root,
     },
     browser: "Google Chrome",
-  });
+    notify: false,
+  })
 }
 
 // Отслеживание изменений
@@ -34,13 +36,13 @@ const watcher = () => {
   watch(path.scss.watch, scss).on("all", browserSync.reload)
   watch(path.js.watch, js).on("all", browserSync.reload)
   watch(path.img.watch, img).on("all", browserSync.reload)
-  watch(path.font.watch, font).on("all", browserSync.reload)
-  // watch(path.favicon.watch, favicon).on("all", browserSync.reload)
+  // watch(path.font.watch, font).on("all", browserSync.reload)
+  watch(path.jquery.watch, jquerylib).on("all", browserSync.reload)
+  watch(path.scss_and_css_libs.watch, libsCssScss).on("all", browserSync.reload)
   watch(path.svgsprite.watch, svgsprite).on("all", browserSync.reload)
-  watch(path.libsCssAndScss.watch, libsCssAndScss).on("all", browserSync.reload)
 }
 
-const build = series(clear, parallel(html, scss, js, font, img, svgsprite, libsCssAndScss, jslibs, jquerylib))
+const build = series(clear, parallel(html, scss, js, jquerylib, jquerylibs, jslibs, libsCssScss, img, svgsprite))
 
 const dev = series(build, parallel(server, watcher))
 
@@ -49,12 +51,15 @@ exports.html = html
 exports.scss = scss
 exports.js = js
 exports.img = img
-exports.font = font
+// exports.font = font
+exports.jquerylib = jquerylib
+exports.jslibs = jslibs
+exports.libsCssScss = libsCssScss
 // exports.favicon = favicon
 exports.svgsprite = svgsprite
-exports.libsCssAndScss = libsCssAndScss
-exports.jslibs = jslibs
-exports.jquerylib = jquerylib
+exports.jquerylibs = jquerylibs
 
 // Сборка
-exports.default = app.isProd ? build : dev
+exports.default = app.isProd
+  ? build
+  : dev;

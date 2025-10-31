@@ -231,7 +231,6 @@ const setHeroPicture = function () {
   for (let i = 1; i <= rangsRus.length; i++) {
     if (currentLevelUp === i) {
       photoHeroPictureIMG.src = './img/' + heroPicturesSrc[i - 1] + '.png';
-      photoHeroPictureWEBP.srcset = './img/' + heroPicturesSrc[i - 1] + '.webp';
     }
   }
 };

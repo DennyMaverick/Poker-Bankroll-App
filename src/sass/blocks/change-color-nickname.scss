@@ -1,0 +1,30 @@
+@use '../vars.scss';
+
+.change-color-nickname {
+  // .change-color-nickname__title
+
+  &__title {
+    color: vars.$white;
+    text-transform: uppercase;
+    margin-right: 30px;
+    line-height: 1.6;
+    font-size: 1.2rem;
+  }
+  &__label {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-right: 30px;
+    display: inline-block;
+
+    background-color: transparent;
+    border: 2px solid vars.$color-title-decore;
+    box-shadow: 0 0 15px vars.$color-title-decore;
+  }
+  &__input {
+    visibility: hidden;
+    transform: scale(0);
+    height: 0;
+    width: 0;
+  }
+}

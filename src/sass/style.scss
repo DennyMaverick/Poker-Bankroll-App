@@ -1,12 +1,41 @@
 //* ============== Variables ============
 
-@import './vars';
+@use './vars';
 
 //* ============== Fonts ================
 
-@import './fonts';
+@use './fonts';
 
 //* ============== Reset & base styles =============
+
+//* ===== Mixins =====
+
+@use './mixins';
+
+// ============ Blocks ==============
+
+@use './blocks/btn';
+@use './blocks/bankroll-app';
+@use './blocks/side-bar';
+@use './blocks/hero-left-side';
+@use './blocks/level';
+@use './blocks/bottom-input';
+@use './blocks/entry';
+@use './blocks/changing-background-section';
+@use './blocks/avatar-border';
+@use './blocks/change-nickname';
+@use './blocks/change-color-nickname';
+@use './blocks/change-direction-nickname';
+@use './blocks/direction-nickname-controls';
+@use './blocks/rotation-nickname';
+@use './blocks/rotate-controls';
+@use './blocks/quontity-buy-in';
+
+// @import "./blocks/slick";
+
+// ======== helpers =========
+@use './blocks/helpers';
+
 
 *,
 *::before,
@@ -26,23 +55,23 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
-  background-color: $bg-color;
+  background-color: vars.$bg-color;
   transition: color 0.5s ease-in, background-color 0.5s ease-in;
 }
 .body {
   &--light {
-    color: $black;
-    background-color: $white;
+    color: vars.$black;
+    background-color: vars.$white;
   }
   &--dark {
-    color: $white;
-    background-color: $black;
+    color: vars.$white;
+    background-color: vars.$black;
   }
 }
 
 a {
   text-decoration: none;
-  color: $black;
+  color: vars.$black;
 }
 
 h1,
@@ -112,7 +141,7 @@ a:focus {
 
 ::selection {
   background-color: #6669ad;
-  color: $white;
+  color: vars.$white;
 }
 // ============ Visualy removing element from page
 
@@ -123,30 +152,3 @@ a:focus {
   width: 0;
 }
 
-//* ===== Mixins =====
-
-@import './mixins';
-
-// ============ Blocks ==============
-
-@import './blocks/btn';
-@import './blocks/bankroll-app';
-@import './blocks/side-bar';
-@import './blocks/hero-left-side';
-@import './blocks/level';
-@import './blocks/bottom-input';
-@import './blocks/entry';
-@import './blocks/changing-background-section';
-@import './blocks/avatar-border';
-@import './blocks/change-nickname';
-@import './blocks/change-color-nickname';
-@import './blocks/change-direction-nickname';
-@import './blocks/direction-nickname-controls';
-@import './blocks/rotation-nickname';
-@import './blocks/rotate-controls';
-@import './blocks/quontity-buy-in';
-
-// @import "./blocks/slick";
-
-// ======== helpers =========
-@import './blocks/helpers';

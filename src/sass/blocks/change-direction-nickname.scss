@@ -1,0 +1,13 @@
+@use '../vars.scss';
+
+.change-direction-nickname {
+  &__title {
+    color: vars.$white;
+    line-height: 1.5;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  &__controls {
+    position: relative;
+  }
+}

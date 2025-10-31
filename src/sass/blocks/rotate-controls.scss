@@ -1,0 +1,16 @@
+@use '../vars.scss';
+
+.rotate-controls {
+  &__icon {
+    fill: vars.$color-title-decore;
+    width: 17px;
+    height: 17px;
+    filter:drop-shadow(0 0 3px vars.$color-title-decore);
+  }
+  &--left {
+
+  }
+  &--right {
+    transform: translateY(-3.5px) rotate(180deg);
+  }
+}
