@@ -7,3 +7,4 @@ import './modules/changeNicknameColor';
 import './modules/changeNickname';
 import './modules/changeBgColorAvatar';
 import './modules/countBuyIns';
+import './modules/downloadTheAvatar';

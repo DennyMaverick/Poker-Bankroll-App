@@ -37,7 +37,10 @@
                     Рыбка
                   </h3>
                 </div>
-                <div id="photo-hero" class="hero-left-side__photo">
+                <div
+                  id="photo-hero"
+                  class="avatar-container hero-left-side__photo"
+                >
                   <div class="hero-left-side__small-circle">
                     <img
                       class="hero-left-side__picture"
@@ -53,6 +56,19 @@
                     type="text"
                   />
                 </div>
+                <section
+                  class="hero-left-side__download-avatar-section changing-background-section"
+                >
+                  <!-- <h3 class="changing-background-section__title">
+                    Скачать аватарку:
+                  </h3>
+                  <button
+                    id="downloadBtn"
+                    class="download-btn bankroll-app__avatar-btn"
+                  >
+                    Скачать
+                  </button> -->
+                </section>
                 <section
                   class="hero-left-side__changing-background-section changing-background-section"
                 >
@@ -227,7 +243,11 @@
                       id="entry-description-text-cash"
                       class="entry__quontity-buy-in quontity-buy-in"
                     >
-                      <span class="entry__description-text entry__description-text-cash">Число входов:</span>
+                      <span
+                        class="entry__description-text entry__description-text-cash"
+                      >
+                        Число входов:
+                      </span>
                       <span
                         id="entry-value-buy-in-cash"
                         class="entry__buy-in-value-cash"
@@ -236,8 +256,8 @@
                       </span>
                     </div>
                     <div class="entry__cash-forbiden-text">
-                    Еще рано играть в кэш
-                  </div>
+                      Еще рано играть в кэш
+                    </div>
                   </div>
                   <div class="entry__satellites-box">
                     <h3 class="entry__satellites-title">SATELLITES</h3>
@@ -246,13 +266,18 @@
                         Твой buy-in в сателлитах:
                       </span>
                       <div class="entry__box-cost entry__box-cost-sat">
-                        <span id="entry-sat-value" class="entry__sat-value">0.25</span>
+                        <span id="entry-sat-value" class="entry__sat-value">
+                          0.25
+                        </span>
                         <span class="entry__currency">$</span>
                       </div>
                     </div>
                     <div class="entry__quontity-buy-in quontity-buy-in">
                       <span class="entry__description-text">Число входов:</span>
-                      <span id="entry-value-buy-in-sat" class="entry__buy-in-value">
+                      <span
+                        id="entry-value-buy-in-sat"
+                        class="entry__buy-in-value"
+                      >
                         1
                       </span>
                     </div>
@@ -320,6 +345,7 @@
     <!-- <footer class="footer" id="contacts">
       <div class="footer__inner container"></div>
     </footer> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <!-- * jQuery -->
     <script src="./js/libs/jquery/jquery.min.js"></script>
     <!-- * js libs -->
