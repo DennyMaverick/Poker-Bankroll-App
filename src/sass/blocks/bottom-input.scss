@@ -1,6 +1,11 @@
 @use '../vars.scss';
+@use '../mixins.scss';
 
 .bottom-input {
+  @include mixins.bp-desk(tablet) {
+    width: 75%;
+    margin: auto;
+  }
   &__title {
     text-transform: uppercase;
     color: vars.$white;
@@ -19,6 +24,9 @@
     max-width: 290px;
     font-size: 7.2rem;
     outline: none;
+    @include mixins.bp-desk(tablet) {
+    max-width: 100%;
+  }
   }
   &__money-value {
     color: vars.$color-title-decore;

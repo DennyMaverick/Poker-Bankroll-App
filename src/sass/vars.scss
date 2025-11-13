@@ -1,3 +1,27 @@
+// Ограничение макета
+$wrapper-max: 1440px !default;
+$wrapper-min: 280px !default;
+
+// Контейнер
+$container-max-widths: 1170px;
+$container-padding: 15px;
+
+// Контрольные точки
+$breakpoints: (
+  mobile-l: 0,
+  mobile-md: 450px,
+  mobile-sm: 576px,
+  mobile: 768px,
+  mobile-up: 769px,
+  ipad-air: 820px,
+  tablet: 992px,
+  tablet-landscape: 1180px,
+  notebook: 1200px,
+  desktop: 1400px,
+) !default;
+
+
+
 
 $primary-color: #134d7c;
 $bg-color: rgba(19, 77, 124, 0.7);

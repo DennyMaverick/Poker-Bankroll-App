@@ -1,30 +1,33 @@
-
-// Breakpoints
-
-$breakpoints: (
-  mobile-xs: 0,
-  mobile-l: 420px,
-  mobile-sm: 576px,
-  mobile: 768px,
-  tablet: 992px,
-  notebook: 1200px,
-  large: 1400px,
-) !default;
+@use 'sass:map';
+@use './vars';
 
 
-// Desktop-first
+// Медиа-выражение mobile-first
+@mixin media-up($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
 
+// Медиа-выражение
 @mixin media-down($width) {
   @media (max-width: $width) {
     @content;
   }
 }
 
-// Desktop-first
-
+// Контрольная точка desktop-first
 @mixin bp-desk($name) {
-  $width: map-get($breakpoints, $name);
+  $width: map.get(vars.$breakpoints, $name);
   @include media-down($width) {
+    @content;
+  }
+}
+
+// Контрольная точка mobile-first
+@mixin bp-mobile($name) {
+  $width: map.get(vars.$breakpoints, $name);
+  @include media-up($width) {
     @content;
   }
 }
