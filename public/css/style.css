@@ -830,3 +830,40 @@ a:focus {
   height: 0;
   width: 0;
 }
+
+@media (max-width: 992px) {
+  .bankroll-app {
+    padding-top: 100px;
+    padding-bottom: 15px;
+  }
+
+  .bankroll-app__title {
+    margin-left: 15%;
+  }
+
+  .bankroll-app__top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .bankroll-app__left-side {
+    width: 75%;
+    margin: auto;
+  }
+
+  .bankroll-app__side-bar {
+    width: 75%;
+    margin: auto;
+  }
+
+  .bottom-input {
+    width: 75%;
+    margin: auto;
+  }
+
+  .bottom-input__input {
+    max-width: 100%;
+  }
+}
