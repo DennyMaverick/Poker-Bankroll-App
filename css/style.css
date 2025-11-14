@@ -1,30 +1,3 @@
-@font-face {
-  font-family: "Rugen";
-  src: url("../fonts/rugen/Rugen-Expanded.eot");
-  src: local("Rugen Expanded"), url("../fonts/rugen/Rugen-Expanded.eot?#iefix") format("embedded-opentype"), url("../fonts/rugen/Rugen-Expanded.woff2") format("woff2"), url("../fonts/rugen/Rugen-Expanded.woff") format("woff"), url("../fonts/rugen/Rugen-Expanded.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/montserrat/Montserrat-Regular-400.eot");
-  src: local("Montserrat"), url("../fonts/montserrat/Montserrat-Regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat/Montserrat-Regular-400.woff2") format("woff2"), url("../fonts/montserrat/Montserrat-Regular-400.woff") format("woff"), url("../fonts/montserrat/Montserrat-Regular-400.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/montserrat/Montserrat-SemiBold-600.eot");
-  src: local("Montserrat"), url("../fonts/montserrat/Montserrat-SemiBold-600.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat/Montserrat-SemiBold-600.woff2") format("woff2"), url("../fonts/montserrat/Montserrat-SemiBold-600.woff") format("woff"), url("../fonts/montserrat/Montserrat-SemiBold-600.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
 .btn {
   font: 600 1.5rem "Montserrat", sans-serif;
   background: darkorange;
@@ -143,6 +116,12 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.bankroll-app__attention {
+  padding-top: 50px;
+  color: #fff;
+  font-weight: 700;
 }
 
 .side-bar__level {
@@ -839,6 +818,7 @@ a:focus {
 
   .bankroll-app__title {
     margin-left: 15%;
+    font-size: 2.5rem;
   }
 
   .bankroll-app__top {
@@ -865,5 +845,25 @@ a:focus {
 
   .bottom-input__input {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .bankroll-app__title::after {
+    font-size: 2rem;
+    right: -50px;
+  }
+
+  .bankroll-app__left-side {
+    width: 100%;
+  }
+
+  .bankroll-app__side-bar {
+    width: 100%;
+  }
+
+  .bottom-input {
+    width: 100%;
+    margin: auto;
   }
 }
