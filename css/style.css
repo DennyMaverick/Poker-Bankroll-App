@@ -878,6 +878,19 @@ a:focus {
     margin: auto;
   }
 
+  .bottom-input__title {
+    font-size: 1.7rem;
+  }
+
+  .bottom-input__input {
+    height: 50px;
+    font-size: 3.5rem;
+  }
+
+  .bottom-input__money-value {
+    font-size: 3.5rem;
+  }
+
   .entry__mtt-title,
   .entry__cash-title,
   .entry__satellites-title {
