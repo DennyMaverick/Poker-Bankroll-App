@@ -15,6 +15,9 @@
     color: vars.$white;
     margin-bottom: 30px;
     font-size: 2.25rem;
+    @include mixins.bp-desk(mobile) {
+      font-size: 1.7rem;
+    }
   }
   &__input {
     padding: 10px;
@@ -29,12 +32,19 @@
     font-size: 7.2rem;
     outline: none;
     @include mixins.bp-desk(tablet) {
-    max-width: 100%;
-  }
+      max-width: 100%;
+    }
+    @include mixins.bp-desk(mobile) {
+      height: 50px;
+      font-size: 3.5rem;
+    }
   }
   &__money-value {
     color: vars.$color-title-decore;
     font-size: 7.2rem;
+    @include mixins.bp-desk(mobile) {
+      font-size: 3.5rem;
+    }
   }
   &__input-box {
     display: flex;
