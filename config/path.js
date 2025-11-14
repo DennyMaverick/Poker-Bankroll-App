@@ -57,7 +57,7 @@ module.exports = {
 
   img: {
     src: [
-      './src/img/**/*.{png,jpg,jpeg,gif,svg,ico}',
+      './src/img/**/*.{png,jpg,jpeg,gif,svg}',
       '!./src/img/sprite/**/*.svg',
     ],
     watch: [
