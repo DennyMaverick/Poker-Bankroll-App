@@ -11,7 +11,7 @@ const html = require("./tasks/html.js");
 const scss = require("./tasks/scss.js");
 const js = require("./tasks/js.js");
 const img = require("./tasks/img.js");
-const font = require('./tasks/font.js');
+// const font = require('./tasks/font.js');
 const jslibs = require("./tasks/jslibs.js");
 const jquerylib = require("./tasks/jquerylib.js");
 const libsCssScss = require("./tasks/libscssscss.js");
@@ -32,14 +32,17 @@ const server = () => {
 
 // Отслеживание изменений
 const watcher = () => {
-  watch(path.html.watch, html).on("all", browserSync.reload)
-  watch(path.scss.watch, scss).on("all", browserSync.reload)
-  watch(path.js.watch, js).on("all", browserSync.reload)
-  watch(path.img.watch, img).on("all", browserSync.reload)
-  watch(path.font.watch, font).on('all', browserSync.reload);
-  watch(path.jquery.watch, jquerylib).on("all", browserSync.reload)
-  watch(path.scss_and_css_libs.watch, libsCssScss).on("all", browserSync.reload)
-  watch(path.svgsprite.watch, svgsprite).on("all", browserSync.reload)
+  watch(path.html.watch, html).on('all', browserSync.reload);
+  watch(path.scss.watch, scss).on('all', browserSync.reload);
+  watch(path.js.watch, js).on('all', browserSync.reload);
+  watch(path.img.watch, img).on('all', browserSync.reload);
+  // watch(path.font.watch, font).on('all', browserSync.reload);
+  watch(path.jquery.watch, jquerylib).on('all', browserSync.reload);
+  watch(path.scss_and_css_libs.watch, libsCssScss).on(
+    'all',
+    browserSync.reload
+  );
+  watch(path.svgsprite.watch, svgsprite).on('all', browserSync.reload);
 }
 
 const build = series(
@@ -49,7 +52,6 @@ const build = series(
     scss,
     js,
     jquerylib,
-    font,
     jquerylibs,
     jslibs,
     libsCssScss,
@@ -65,7 +67,7 @@ exports.html = html
 exports.scss = scss
 exports.js = js
 exports.img = img
-exports.font = font;
+// exports.font = font;
 exports.jquerylib = jquerylib
 exports.jslibs = jslibs
 exports.libsCssScss = libsCssScss
