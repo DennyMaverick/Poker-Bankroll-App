@@ -351,6 +351,7 @@
   text-transform: uppercase;
   font-weight: 600;
   margin-right: 20px;
+  margin-bottom: 15px;
 }
 
 .entry__description-text-cash {
@@ -522,12 +523,12 @@
   background: #d55916;
   content: "";
   position: absolute;
-  left: -3px;
-  top: calc(50% - 1px);
+  left: -2.5px;
+  top: calc(48% - 1px);
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-  width: 23px;
+  width: 21px;
   height: 2px;
 }
 
@@ -535,12 +536,12 @@
   background: #d55916;
   content: "";
   position: absolute;
-  right: -3px;
-  top: calc(50% - 1px);
+  right: -2.5px;
+  top: calc(48% - 1px);
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  width: 23px;
+  width: 21px;
   height: 2px;
 }
 
@@ -865,12 +866,25 @@ a:focus {
     right: -90px;
   }
 
+  .bankroll-app__top {
+    padding: 15px;
+  }
+
+  .bankroll-app__bottom {
+    padding: 15px;
+  }
+
   .bankroll-app__left-side {
     width: 100%;
   }
 
   .bankroll-app__side-bar {
     width: 100%;
+  }
+
+  .side-bar__level {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .bottom-input {
@@ -891,9 +905,43 @@ a:focus {
     font-size: 3.5rem;
   }
 
+  .entry__box-cost {
+    font-size: 1.9rem;
+  }
+
+  .entry__buy-in-value {
+    font-size: 19px;
+  }
+
+  .entry__buy-in-value-cash {
+    font-size: 19px;
+  }
+
   .entry__mtt-title,
   .entry__cash-title,
   .entry__satellites-title {
-    font-size: 3rem;
+    font-size: 2.2rem;
+  }
+
+  .changing-background-section__box {
+    width: 15px;
+    height: 15px;
+  }
+
+  .avatar-border__remove-border-btn {
+    width: 15px;
+    height: 15px;
+  }
+
+  .avatar-border__remove-border-btn::after {
+    width: 15px;
+    top: 44%;
+    height: 1px;
+  }
+
+  .avatar-border__remove-border-btn::before {
+    width: 15px;
+    top: 44%;
+    height: 1px;
   }
 }
