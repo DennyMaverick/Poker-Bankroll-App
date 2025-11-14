@@ -104,14 +104,18 @@
   }
   &__attention {
     margin-top: 25px;
-    color: vars.$color-lever-bar;
-    font-weight: 700;
-
     padding: 25px 15px;
     border: 2px solid vars.$color-lever-bar;
     box-shadow: 0 0 15px vars.$color-lever-bar;
     background-color: vars.$black;
     border-radius: 10px;
+  }
+  &__attention-text {
+    color: vars.$color-lever-bar;
+    font-weight: 700;
+    @include mixins.bp-desk(mobile) {
+      font-size: 1.2rem;
+    }
   }
 }
 

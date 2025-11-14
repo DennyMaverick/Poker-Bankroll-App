@@ -7,13 +7,14 @@
     margin-bottom: 35px;
     @include mixins.bp-desk(mobile) {
       margin-top: 10px;
-    margin-bottom: 10px;
+      margin-bottom: 50px;
     }
   }
   &__decrease-level,
   &__increase-level {
     display: inline-block;
-    transition: opacity .3s ease-in, transform .3s ease-in, width .3s ease-in, height .3s ease-in;
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in, width 0.3s ease-in,
+      height 0.3s ease-in;
     opacity: 0;
     transform: scale(0);
     visibility: hidden;
