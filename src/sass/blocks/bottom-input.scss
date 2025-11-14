@@ -6,6 +6,10 @@
     width: 75%;
     margin: auto;
   }
+  @include mixins.bp-desk(mobile) {
+    width: 100%;
+    margin: auto;
+  }
   &__title {
     text-transform: uppercase;
     color: vars.$white;

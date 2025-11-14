@@ -52,7 +52,7 @@
     "gulp-strip-comments": "^2.6.0",
     "gulp-svg-sprite": "^2.0.3",
     "gulp-svgmin": "^4.1.0",
-    "gulp-ttf2woff2": "^5.0.0",
+    "gulp-ttf2woff2": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^3.0.0",
     "gulp-webp-css": "^1.1.0",

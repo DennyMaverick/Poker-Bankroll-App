@@ -17,8 +17,10 @@
     text-shadow: 1px 1px 10px vars.$black;
     position: relative;
     @include mixins.bp-desk(tablet) {
-    margin-left: 15%;
-  }
+      margin-left: 15%;
+      font-size: 2.5rem;
+    }
+
     &::after {
       position: absolute;
       right: -150px;
@@ -26,6 +28,12 @@
       content: 'POKER';
       transform: rotate(35deg);
       color: vars.$color-title-decore;
+    }
+    @include mixins.bp-desk(mobile) {
+      &::after {
+        font-size: 2rem;
+        right: -50px;
+      }
     }
   }
   &__inner {
@@ -55,12 +63,18 @@
       width: 75%;
       margin: auto;
     }
+    @include mixins.bp-desk(mobile) {
+      width: 100%;
+    }
   }
   &__side-bar {
     width: 45%;
     @include mixins.bp-desk(tablet) {
       width: 75%;
       margin: auto;
+    }
+    @include mixins.bp-desk(mobile) {
+      width: 100%;
     }
   }
   &__border-avatar {
@@ -79,6 +93,11 @@
   &__change-color-nickname {
     display: flex;
     align-items: center;
+  }
+  &__attention {
+    padding-top: 50px;
+    color: vars.$white;
+    font-weight: 700;
   }
 }
 
