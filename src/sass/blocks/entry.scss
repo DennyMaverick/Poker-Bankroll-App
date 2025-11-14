@@ -1,4 +1,5 @@
 @use '../vars.scss';
+@use '../mixins.scss';
 
 .entry {
   // .entry__description-text
@@ -77,6 +78,9 @@
     font-size: 3.5rem;
     color: vars.$color-lever-bar;
     margin-bottom: 20px;
+    @include mixins.bp-desk(mobile) {
+      font-size: 3rem;
+    }
   }
   &__satellites {
     margin-bottom: 20px;

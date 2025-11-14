@@ -30,9 +30,11 @@
       color: vars.$color-title-decore;
     }
     @include mixins.bp-desk(mobile) {
+      margin-left: 0;
+      font-size: 2rem;
       &::after {
-        font-size: 2rem;
-        right: -50px;
+        font-size: 1.5rem;
+        right: -90px;
       }
     }
   }
@@ -95,9 +97,15 @@
     align-items: center;
   }
   &__attention {
-    padding-top: 50px;
-    color: vars.$white;
+    margin-top: 25px;
+    color: vars.$color-lever-bar;
     font-weight: 700;
+
+    padding: 25px 15px;
+    border: 2px solid vars.$color-lever-bar;
+    box-shadow: 0 0 15px vars.$color-lever-bar;
+    background-color: vars.$black;
+    border-radius: 10px;
   }
 }
 
