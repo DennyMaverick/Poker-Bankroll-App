@@ -121,13 +121,16 @@
 .bankroll-app__attention {
   background: #2b2b2b;
   margin-top: 25px;
-  color: #d55916;
-  font-weight: 700;
   padding: 25px 15px;
   border: 2px solid #d55916;
   -webkit-box-shadow: 0 0 15px #d55916;
   box-shadow: 0 0 15px #d55916;
   border-radius: 10px;
+}
+
+.bankroll-app__attention-text {
+  color: #d55916;
+  font-weight: 700;
 }
 
 .side-bar__level {
@@ -882,9 +885,13 @@ a:focus {
     width: 100%;
   }
 
+  .bankroll-app__attention-text {
+    font-size: 1.2rem;
+  }
+
   .side-bar__level {
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
   }
 
   .bottom-input {
