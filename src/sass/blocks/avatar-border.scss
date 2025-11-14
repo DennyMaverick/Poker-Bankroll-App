@@ -1,59 +1,77 @@
 @use '../vars.scss';
+@use '../mixins.scss';
 
 .avatar-border {
+  // .avatar-border__title
 
-    // .avatar-border__title
+  &__title {
+    color: vars.$white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
 
-    &__title {
-      color: vars.$white;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-      font-size: 1.3rem;
-      line-height: 1.5;
+  // .avatar-border__label
+
+  &__label {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-right: 30px;
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid vars.$color-title-decore;
+    box-shadow: 0 0 15px vars.$color-title-decore;
+  }
+  &__remove-border-btn {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    border: 2px solid vars.$color-title-decore;
+    box-shadow: 0 0 15px vars.$color-title-decore;
+    @include mixins.bp-desk(mobile) {
+      width: 15px;
+      height: 15px;
     }
-
-    // .avatar-border__label
-
-    &__label {
-      cursor: pointer;
-      width: 20px;
-      height: 20px;
-      flex-shrink: 0;
-      margin-right: 30px;
-      display: inline-block;
-      background-color: transparent;
-      border: 2px solid vars.$color-title-decore;
-      box-shadow: 0 0 15px vars.$color-title-decore;
+    &::after {
+      content: '';
+      position: absolute;
+      left: -2.5px;
+      top: calc(48% - 1px);
+      transform: rotate(45deg);
+      width: 21px;
+      height: 2px;
+      background-color: vars.$color-lever-bar;
     }
-    &__remove-border-btn {
-      position: relative;
-      width: 20px;
-      height: 20px;
-      flex-shrink: 0;
-      border: 2px solid vars.$color-title-decore;
-      box-shadow: 0 0 15px vars.$color-title-decore;
-      &::after {
-        content: '';
-        position: absolute;
-        left: -3px;
-        top: calc(50% - 1px);
-        transform: rotate(45deg);
-        width: 23px;
-        height: 2px;
-        background-color: vars.$color-lever-bar;
+    &::before {
+      content: '';
+      position: absolute;
+      right: -2.5px;
+      top: calc(48% - 1px);
+      transform: rotate(-45deg);
+      width: 21px;
+      height: 2px;
+      background-color: vars.$color-lever-bar;
+    }
+    &::after {
+      @include mixins.bp-desk(mobile) {
+        width: 15px;
+        top: 44%;
+        height: 1px;
       }
-      &::before {
-        content: '';
-        position: absolute;
-        right: -3px;
-        top: calc(50% - 1px);
-        transform: rotate(-45deg);
-        width: 23px;
-        height: 2px;
-        background-color: vars.$color-lever-bar;
+    }
+    &::before {
+      @include mixins.bp-desk(mobile) {
+        width: 15px;
+        top: 44%;
+        height: 1px;
       }
     }
-    &__elements-of-controls {
-      display: flex;
-    }
+  }
+  &__elements-of-controls {
+    display: flex;
+  }
 }

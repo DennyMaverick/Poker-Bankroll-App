@@ -1,4 +1,5 @@
 @use '../vars.scss';
+@use '../mixins.scss';
 
 .changing-background-section {
 
@@ -27,5 +28,11 @@
       transform: scale(0);
       height: 0;
       width: 0;
+    }
+    &__box {
+      @include mixins.bp-desk(mobile) {
+        width: 15px;
+        height: 15px;
+    }
     }
 }

@@ -15,6 +15,7 @@
     text-transform: uppercase;
     font-weight: 600;
     margin-right: 20px;
+    margin-bottom: 15px;
     &-cash {
       margin-bottom: 30px;
     }
@@ -23,12 +24,13 @@
     }
   }
 
-  // .entry__value
-
   &__box-cost {
     color: vars.$color-title-decore;
     font-weight: 700;
     font-size: 2.7rem;
+    @include mixins.bp-desk(mobile) {
+      font-size: 1.9rem;
+    }
   }
   &__tournaments-mtt {
     margin-bottom: 20px;
@@ -36,10 +38,16 @@
   &__buy-in-value {
     font-size: 25px;
     font-weight: 700;
+    @include mixins.bp-desk(mobile) {
+      font-size: 19px;
+    }
   }
   &__buy-in-value-cash {
     font-size: 25px;
     font-weight: 700;
+    @include mixins.bp-desk(mobile) {
+      font-size: 19px;
+    }
   }
   &__cash-forbiden-text {
     color: vars.$decrease-level-color;
@@ -79,7 +87,7 @@
     color: vars.$color-lever-bar;
     margin-bottom: 20px;
     @include mixins.bp-desk(mobile) {
-      font-size: 3rem;
+      font-size: 2.2rem;
     }
   }
   &__satellites {
