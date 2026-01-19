@@ -71,6 +71,7 @@ const rangsRus = [
   'черепашка - ниндзя Леонардо',
   'черепашка - ниндзя Донателло',
   'черепашка - ниндзя Микеланджело',
+  'кролик Роджер',
 ];
 
 const heroPicturesSrc = [
@@ -109,13 +110,14 @@ const heroPicturesSrc = [
   'tirtle-ninja-leo-changed',
   'tirtle-ninja-don-changed',
   'tirtle-ninja-mike-changed',
+  'rabbit-rojer',
 ];
 
 const bankrollScores = [
   30, 75, 150, 300, 600, 900, 1200, 1500, 3000, 6000, 9000, 15000, 30000, 45000,
   60000, 75000, 90000, 105000, 120000, 135000, 150000, 165000, 180000, 195000,
   210000, 225000, 240000, 255000, 270000, 285000, 300000, 350000, 400000,
-  450000, 500000,
+  450000, 500000, 550000,
 ];
 
 const bankrollScoresCash = [
@@ -136,7 +138,7 @@ const startLevelBuyin = 0.1;
 
 let currentStartBankroll;
 
-const maxLevel = 35;
+const maxLevel = 36;
 
 // set level up value
 
@@ -179,7 +181,7 @@ const setLevelUp = function () {
     }
   });
 
-  const currentBankrollEntry = bankrollScores[currentLevelUp - 1] / 300;
+  const currentBankrollEntry = bankrollScores[currentLevelUp - 1] / 1000;
 
   if (
     currentBankrollValue < 0 ||
@@ -256,7 +258,7 @@ const setLimitCash = function () {
     }
   }
 
-  let currentLimitNL = currentLimitCashBankroll / 500;
+  let currentLimitNL = currentLimitCashBankroll / 1000;
 
   if (currentLimitCashBankroll === 0) {
     entryBoxCashCostEl.classList.add('entry__cash-value-box--forbidden');
@@ -293,7 +295,7 @@ const setSatellitesValue = function () {
     }
   }
 
-  let currentLimitSatBuyin = currentBankrollBuyin / 500;
+  let currentLimitSatBuyin = currentBankrollBuyin / 1000;
 
   if (currentBankrollBuyin === 0) {
     entrySatTextForbidden.classList.add('entry__sat-text-forbidden--active');
