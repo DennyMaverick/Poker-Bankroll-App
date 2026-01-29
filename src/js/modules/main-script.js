@@ -81,6 +81,7 @@ const rangsRus = [
   'ящерка',
   'панда',
   'николас кэйдж',
+  'малыш - хамелеон',
 ];
 
 const heroPicturesSrc = [
@@ -129,6 +130,7 @@ const heroPicturesSrc = [
   'lizzard-little',
   'panda',
   'nicolas',
+  'chameleon',
 ];
 
 const bankrollScores = [
@@ -136,7 +138,7 @@ const bankrollScores = [
   60000, 75000, 90000, 105000, 120000, 135000, 150000, 165000, 180000, 195000,
   210000, 225000, 240000, 255000, 270000, 285000, 300000, 350000, 400000,
   450000, 500000, 550000, 600000, 650000, 700000, 750000, 800000, 850000,
-  900000, 950000, 1000000,
+  900000, 950000, 1000000, 1050000,
 ];
 
 const bankrollScoresCash = [
@@ -157,7 +159,7 @@ const startLevelBuyin = 0.1;
 
 let currentStartBankroll;
 
-const maxLevel = 45;
+const maxLevel = 46;
 
 // set level up value
 
