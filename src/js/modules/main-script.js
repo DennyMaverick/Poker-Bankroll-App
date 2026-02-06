@@ -77,6 +77,7 @@ const rangsRus = [
   'барсик',
   'шахматный гений',
   'компьютерный гений',
+  'покерный гений',
   'алекс фоксен',
   'ящерка',
   'панда',
@@ -132,6 +133,7 @@ const heroPicturesSrc = [
   'barsik',
   'chess-master',
   'pc-master',
+  'poker-master',
   'alex-foxen',
   'lizzard-little',
   'panda',
@@ -151,7 +153,7 @@ const bankrollScores = [
   210000, 225000, 240000, 255000, 270000, 285000, 300000, 350000, 400000,
   450000, 500000, 550000, 600000, 650000, 700000, 750000, 800000, 850000,
   900000, 950000, 1000000, 1050000, 1100000, 1150000, 1200000, 1250000, 1300000,
-  1350000,
+  1350000, 1400000,
 ];
 
 const bankrollScoresCash = [
@@ -172,7 +174,7 @@ const startLevelBuyin = 0.1;
 
 let currentStartBankroll;
 
-const maxLevel = 52;
+const maxLevel = 53;
 
 // set level up value
 
