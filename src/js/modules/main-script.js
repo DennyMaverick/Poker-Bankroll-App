@@ -98,6 +98,7 @@ const rangsRus = [
   'скейтер',
   'рок - звезда',
   'уличный гонщик',
+  'хак чивер',
 ];
 
 const heroPicturesSrc = [
@@ -163,6 +164,7 @@ const heroPicturesSrc = [
   'skater',
   'rock-star',
   'street-racer',
+  'huck-cheever',
 ];
 
 const bankrollScores = [
@@ -172,7 +174,7 @@ const bankrollScores = [
   450000, 500000, 550000, 600000, 650000, 700000, 750000, 800000, 850000,
   900000, 950000, 1000000, 1050000, 1100000, 1150000, 1200000, 1250000, 1300000,
   1350000, 1400000, 1450000, 1500000, 1550000, 1600000, 1650000, 1700000,
-  1750000, 1800000, 1850000,
+  1750000, 1800000, 1850000, 1900000,
 ];
 
 const bankrollScoresCash = [
@@ -193,7 +195,7 @@ const startLevelBuyin = 0.1;
 
 let currentStartBankroll;
 
-const maxLevel = 62;
+const maxLevel = 63;
 
 // set level up value
 
